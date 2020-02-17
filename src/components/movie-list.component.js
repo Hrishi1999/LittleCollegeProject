@@ -7,7 +7,7 @@ const Movie = props => (
     <td>{props.movie.name}</td>
     <td>{props.movie.gross}</td>
     <td>{props.movie.ratings}</td>
-    <td>{props.movie.date.substring(0,10)}</td>
+    <td>{props.movie.date.substring(0,4)}</td>
      <td>
       <a href="#" onClick={() => { props.deleteMovie(props.movie._id) }}>Remove From List</a>
     </td>
@@ -58,7 +58,7 @@ export default class MovieList extends Component {
               <th>Movie Name</th>
               <th>Movie Grossing</th>
               <th>Ratings</th>
-              <th>Date</th>
+              <th>Year</th>
               <th>Actions</th>
             </tr>
           </thead>
