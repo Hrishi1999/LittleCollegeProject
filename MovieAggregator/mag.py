@@ -21,8 +21,6 @@ for i in range(0, 100):
         dt = '01/01/' + date.text.replace('(', '').replace(')','')
         dt2 = datetime.strptime(dt, '%d/%M/%Y')
 
-        print(dt2.isoformat())
-
         movie = {
             "name": currentMovie.h3.a.text,
             "gross" : gross_vote.text,
