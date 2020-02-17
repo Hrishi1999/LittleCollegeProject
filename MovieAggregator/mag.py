@@ -11,7 +11,7 @@ API_URL = 'http://localhost:5000/movie/add'
 html_soup = BeautifulSoup(response.text, 'html.parser')
 movie_containers = html_soup.find_all('div', class_ = 'lister-item mode-detail')
 
-for i in range(0, 2):
+for i in range(0, 100):
     try:
         currentMovie = movie_containers[i]
         date = currentMovie.find('span', attrs = {'class':'lister-item-year text-muted unbold'})
