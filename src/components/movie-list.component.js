@@ -24,7 +24,7 @@ export default class MovieList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/movie/')
+    axios.get('http://localhost:5001/movie/')
       .then(response => {
         this.setState({ movies: response.data })
       })
@@ -34,7 +34,7 @@ export default class MovieList extends Component {
   }
 
   deleteMovie(id) {
-    axios.delete('http://localhost:5000/movie/'+id)
+    axios.delete('http://localhost:5001/movie/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
@@ -56,7 +56,7 @@ export default class MovieList extends Component {
           <thead className="thead-light">
             <tr>
               <th>Movie Name</th>
-              <th>Movie Grossing</th>
+              <th>Movie Grossing (In Millions, $)</th>
               <th>Ratings</th>
               <th>Year</th>
               <th>Actions</th>
